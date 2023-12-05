@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Messages here ....</h1>
+    <div id="user-chats">{{userChats}}</div>
+    <form action="/message" onsubmit="document.getElementById('username').value = localStorage.getItem('username')"
+        method="POST">
+        <input type="hidden" name="username" id="username" />
+        <input type="text" name="message" placeholder="enter your message" />
+        <button>send</button>
+
+    </form>
+</body>
+
+</html>
